@@ -26,3 +26,12 @@ def test_t3_rejeita_percentual_zero():
     resultado = desconto_valido(percentual)
     # Verificar
     assert resultado is False
+
+
+def test_t4_rejeita_percentual_fracionario_dentro_da_faixa():
+    # Preparar
+    percentual = MAXIMO - 0.5
+    # Agir
+    resultado = desconto_valido(percentual)
+    # Verificar
+    assert resultado is False
